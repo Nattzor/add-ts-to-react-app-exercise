@@ -1,4 +1,9 @@
-const TVSchedule = ({ title, children }) => {
+interface TVScheduleWithProps {
+    title?: string,
+    children: JSX.Element[]
+}
+
+const TVSchedule = ({ title, children }: TVScheduleWithProps) => {
     return <>
         <h1 id="js-title">{title}</h1>
         <div id="js-schedule">

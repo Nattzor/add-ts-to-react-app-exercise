@@ -3,18 +3,20 @@ import { useParams } from 'react-router-dom';
 import dayjs from 'dayjs';
 import TVSchedule from './TVSchedule';
 import TVScheduleItem from './TVScheduleItem';
+// import { Program, TVScheduleItemInterface, TVInterface } from './types'
 
 type Program = {
     name: string
     start: Date
-    desctiption: string
+    desctiption: string,
+    id: number
 }
 
 
 const TVPage = () => {
 
     const { channelId } = useParams();
-    const [programs, setPrograms] = useState<any[]>([]);
+    const [programs, setPrograms] = useState<Program[]>([]);
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
