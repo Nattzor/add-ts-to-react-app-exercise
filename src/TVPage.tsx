@@ -5,10 +5,10 @@ import TVSchedule from './TVSchedule';
 import TVScheduleItem from './TVScheduleItem';
 // import { Program, TVScheduleItemInterface, TVInterface } from './types'
 
-type Program = {
+export type Program = {
     name: string
     start: Date
-    desctiption: string,
+    description: string,
     id: number
 }
 

@@ -1,12 +1,8 @@
+import { Program } from './TVPage'
+
 interface TVScheduleItemWithProps {
-    program: ProgramTV,
+    program: Program,
     key: number
-}
-type ProgramTV = {
-    name: string
-    start: Date
-    desctiption: string,
-    id: number
 }
 
 const TVScheduleItem = ({ program } : TVScheduleItemWithProps) => {
