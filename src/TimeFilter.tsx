@@ -1,4 +1,4 @@
-import React from "react"
+
 
 const TimeFilter= (): JSX.Element => {
     const renderOptions = () =>{
