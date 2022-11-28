@@ -1,20 +1,16 @@
 const TimeFilter= (): JSX.Element => {
-    // let times = 0;
-    // for ( times = 0; times <= 24; times ++) {
-    // }
+    const renderOptions = () =>{
+      const options: JSX.Element[] = []
+      for(let i=0; i<25; i++){
+        options.push(<option value={i}> {i.toString().length > 1 ? i.toString() : '0'+i.toString()}:00</option>)
+      }
+      return options
+    }
       return (
-        <div>
-        <select>
-            {
-                htmlFor(let i=0; i < 25; i++){
-
-                    <option value={i}>{i}</option>
-
-                };
-
-            };
+        <select style={{padding: "10px", margin: "auto", width: "50%"}}>
+           {renderOptions()}
+            <option></option>
           </select>
-        </div>
       );
 
 
