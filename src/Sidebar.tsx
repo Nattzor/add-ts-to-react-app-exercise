@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
+import TimeFilter from "./TimeFilter";
 
 const Sidebar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -17,7 +18,10 @@ const Sidebar = () => {
                 <li><Link to="SVT Barn">SVT Barn</Link></li>
                 <li><Link to="Kunskapskanalen">Kunskapskanalen</Link></li>
                 <li><Link to="SVT 24">SVT 24</Link></li>
+                
             </ul>}
+            
+          <TimeFilter/>
         </>
     )
 }
