@@ -19,7 +19,6 @@ const TimeFilter= (): JSX.Element => {
         <form action="submit">
           <select style={{padding: "10px", margin: "10px 10px 10px 20px", width: "50%"}} onChange={(e) => handleChange(e)}>
             {renderOptions()}
-              <option></option>
             </select>
         </form>
       );
