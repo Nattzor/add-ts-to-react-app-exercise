@@ -4,9 +4,12 @@ const TimeFilter= (): JSX.Element => {
     const renderOptions = () =>{
       const options: JSX.Element[] = []
       for(let i=0; i<25; i++){
-        options.push(<option value={i} key={i}> {i.toString().length > 1 ? i.toString() : '0'+i.toString()}:00</option>)
+        options.push(<option value={i} key={i}>{formatedTime(i)}</option>)
       }
       return options
+    }
+    const formatedTime = (i: number): string => {
+      return i.toString().length > 1 ? i.toString() + ':00' : '0'+i.toString() + ':00'
     }
 
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
