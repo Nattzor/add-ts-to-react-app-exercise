@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaBars } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
-import TimeFilter from "./TimeFilter";
+
 
 const Sidebar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -13,8 +13,6 @@ const Sidebar = () => {
                 { showMenu ? <CgClose/> : <FaBars/> }
             </div>
             {showMenu && <ul className="menu">
-                <TimeFilter/>
-                <hr />
                 <li><Link to="SVT 1">SVT 1</Link></li>
                 <li><Link to="SVT 2">SVT 2</Link></li>
                 <li><Link to="SVT Barn">SVT Barn</Link></li>
